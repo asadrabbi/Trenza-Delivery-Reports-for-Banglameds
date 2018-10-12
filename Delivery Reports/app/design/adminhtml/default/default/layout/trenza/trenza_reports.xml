@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_trenza_reports_index>
+        <reference name="content">
+			<block type="trenza_reports/adminhtml_report" template="report/grid/container.phtml" name="trenza_reports">
+				<block type="trenza_reports/adminhtml_filter_form" name="grid.filter.form"/>
+			</block>
+        </reference>
+    </adminhtml_trenza_reports_index>
+</layout>

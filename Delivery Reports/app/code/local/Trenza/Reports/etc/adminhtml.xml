@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <report>
+            <children>
+				<trenza_reports translate="title">
+					<title>Delivery Reports</title>
+					<action>adminhtml/trenza_reports</action>
+					<sort_order>100</sort_order>
+				</trenza_reports>
+            </children>
+        </report>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <trenza_reports>
+                                        <title>Delivery Reports Section</title>
+                                    </trenza_reports>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <report>
+						<children>
+							<trenza_reports translate="title">
+								<title>Delivery Reports</title>
+								<children>
+									<view translate="title">
+										<title>View</title>
+									</view>
+								</children>
+							</trenza_reports>
+						</children>
+                    </report>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

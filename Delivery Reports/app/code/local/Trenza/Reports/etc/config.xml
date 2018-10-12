@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Trenza_Reports>
+            <version>0.1.0</version>
+            <depends>
+                <Mage_Adminhtml />
+                <Mage_Sales />
+            </depends>
+        </Trenza_Reports>
+    </modules>
+
+    <global>
+        <models>
+            <trenza_reports>
+                <class>Trenza_Reports_Model</class>
+                <resourceModel>trenza_reports_mysql4</resourceModel>
+            </trenza_reports>
+            <trenza_reports_mysql4>
+                <class>Trenza_Reports_Model_Mysql4</class>
+            </trenza_reports_mysql4>
+        </models>
+        <helpers>
+            <trenza_reports>
+                <class>Trenza_Reports_Helper</class>
+            </trenza_reports>
+        </helpers>
+        <blocks>
+            <trenza_reports>
+                <class>Trenza_Reports_Block</class>
+            </trenza_reports>
+        </blocks>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Trenza_Reports before="Mage_Adminhtml">Trenza_Reports_Adminhtml</Trenza_Reports>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <trenza_reports>
+                    <file>trenza/trenza_reports.xml</file>
+                </trenza_reports>
+            </updates>
+        </layout>
+    </adminhtml>
+
+</config>
